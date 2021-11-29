@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/group/index",
+    "pages/book/index",
+    "pages/my/index"
+  ],
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index"
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "线下小助手",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar":{
+    "color": "#999",
+    "selectedColor": "#404691",
+    "backgroundColor": "#fafafa",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home-page.png",
+        "selectedIconPath": "icons/home-page-select.png"
+      },
+      {
+        "pagePath": "pages/book/index",
+        "text": "剧本",
+        "iconPath": "icons/book.png",
+        "selectedIconPath": "icons/book-o.png"
+      },
+      {
+        "pagePath":  "pages/group/index",
+        "text": "组局",
+        "iconPath": "icons/red-flag.png",
+        "selectedIconPath": "icons/red-flag-o.png"
+      },
+       {
+        "pagePath":  "pages/my/index",
+        "text": "我的",
+        "iconPath": "icons/user-no.png",
+        "selectedIconPath": "icons/user.png"
+      }
+    ]
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
