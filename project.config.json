@@ -46,7 +46,7 @@
   "compileType": "miniprogram",
   "libVersion": "2.21.0",
   "appid": "wxe4769510c58ce34f",
-  "projectname": "jbs%E7%BA%BF%E4%B8%8B%E5%B0%8F%E5%8A%A9%E6%89%8B",
+  "projectname": "剧本杀线下助手演示",
   "debugOptions": {
     "hidedInDevtools": []
   },

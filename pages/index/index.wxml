@@ -1,4 +1,56 @@
-<!--index.wxml-->
 <view>
-  我是首页
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
+  <view class="category-container">
+    <view class="category-box">
+      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
+        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
+        <view slot="footer">
+        </view>
+      </van-card>
+    </view>
+  </view>
 </view>

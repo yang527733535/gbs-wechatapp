@@ -9,19 +9,29 @@
     "van-button": "@vant/weapp/button/index",
     "van-cell": "@vant/weapp/cell/index",
     "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-action-sheet": "@vant/weapp/action-sheet/index"
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-search": "@vant/weapp/search/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-card": "@vant/weapp/card/index",
+    "van-sticky": "@vant/weapp/sticky/index"
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarTitleText": "线下小助手",
-    "navigationBarTextStyle": "white"
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
   },
-  "tabBar":{
+  "tabBar": {
     "color": "#999",
     "selectedColor": "#404691",
     "backgroundColor": "#fafafa",
-    "list":[
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "icons/home-page.png",
@@ -34,13 +44,13 @@
         "selectedIconPath": "icons/book-o.png"
       },
       {
-        "pagePath":  "pages/group/index",
+        "pagePath": "pages/group/index",
         "text": "组局",
         "iconPath": "icons/red-flag.png",
         "selectedIconPath": "icons/red-flag-o.png"
       },
-       {
-        "pagePath":  "pages/my/index",
+      {
+        "pagePath": "pages/my/index",
         "text": "我的",
         "iconPath": "icons/user-no.png",
         "selectedIconPath": "icons/user.png"
