@@ -1,0 +1,40 @@
+.mycard {
+  margin: 20rpx;
+  /* height: 200px; */
+  background-color: #011627;
+  border-radius: 16rpx;
+  color: white;
+  font-family: Helvetica, sans-serif;
+}
+
+.pointsInfo {
+  padding: 30rpx;
+  font-size: large;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pointsInfo_left {
+  color: white;
+}
+
+.pointsInfo_left_score {
+  font-weight: bolder;
+}
+
+.pointsInfo_rigth_item {
+  color: black;
+  width: 170rpx;
+  height: 70rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60rpx;
+  font-size: 26rpx;
+  font-weight: bolder;
+}
+
+
+/* margin: 20rpx; */

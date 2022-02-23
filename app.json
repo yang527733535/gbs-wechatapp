@@ -3,7 +3,21 @@
     "pages/index/index",
     "pages/group/index",
     "pages/book/index",
-    "pages/my/index"
+    "pages/my/index",
+    "pages/userinfo/index",
+    "pages/coupons/index",
+    "pages/points/index",
+    "pages/pointsrecord/index",
+    "pages/smallshop/index",
+    "pages/cardetail/index",
+    "pages/map/index",
+    "pages/drama/detail",
+    "pages/dramadescripe/index",
+    "pages/shopdetail/index",
+    "pages/chongzhi/index",
+    "pages/dmdetai/index",
+    "pages/join/index",
+    "pages/pay/index"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -18,7 +32,8 @@
     "van-divider": "@vant/weapp/divider/index",
     "van-transition": "@vant/weapp/transition/index",
     "van-card": "@vant/weapp/card/index",
-    "van-sticky": "@vant/weapp/sticky/index"
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-icon": "@vant/weapp/icon/index"
   },
   "window": {
     "backgroundTextStyle": "light",
@@ -26,6 +41,9 @@
     "navigationBarTitleText": "",
     "navigationBarTextStyle": "black",
     "onReachBottomDistance": 50
+  },
+  "networkTimeout": {
+    "request": 10000
   },
   "tabBar": {
     "color": "#999",
@@ -44,12 +62,6 @@
         "selectedIconPath": "icons/book-o.png"
       },
       {
-        "pagePath": "pages/group/index",
-        "text": "组局",
-        "iconPath": "icons/red-flag.png",
-        "selectedIconPath": "icons/red-flag-o.png"
-      },
-      {
         "pagePath": "pages/my/index",
         "text": "我的",
         "iconPath": "icons/user-no.png",
@@ -57,7 +69,11 @@
       }
     ]
   },
-
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

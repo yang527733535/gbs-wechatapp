@@ -1,0 +1,34 @@
+<view class="detailContent">
+  <view class="shopname">
+    {{storage.store_name}}
+  </view>
+  <view class="phone">
+    <van-icon name="phone-o" />
+    联系方式： {{storage.store_phone}}
+  </view>
+  <view class="phone">
+    <van-icon name="location-o" />
+    地址： {{storage.position_address}}
+  </view>
+  <view class="btnGroup">
+    <van-button type="primary" size="normal">切换店铺
+    </van-button>
+    <van-button
+      data-phone-number="{{storage.store_phone}}"
+      bind:click="makePhoneCall"
+      icon="phone-o"
+      type="primary"
+      size="normal"
+    >联系店铺
+    </van-button>
+    <van-button
+      bind:click="onNavigationTap"
+      icon="location-o"
+      type="primary"
+      size="normal"
+    >导航
+    </van-button>
+  </view>
+
+</view>
+

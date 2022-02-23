@@ -1,0 +1,105 @@
+<!-- <view bindtap="showPopup">开车s日期:{{currentDate}}</view> -->
+
+<view class="pcContent">
+  <view class="dramaCard">
+    <view class="dramaCard_img">
+      <image
+        class="darmaCover"
+        src="{{dramaDetail.gb_cover}}"
+        mode="aspectFit|aspectFill|widthFix"
+        lazy-load="false"
+        binderror=""
+        bindload=""
+      />
+
+    </view>
+    <view class="dramaCard_dramainfo">
+      <view class="dramaCard_dramainfo_title">{{dramaDetail.gb_title}}</view>
+      <view class="dramaCard_dramainfo_desc">
+        <van-icon color='white' name="friends-o" />
+        {{dramaDetail.gb_people_note}}
+        <van-icon name="clock-o" />
+        {{dramaDetail.gb_hour}}小时
+      </view>
+      <van-tag
+        class='mytag'
+        wx:for="{{dramaDetail.gb_text_tag}}"
+        color="#f2826a"
+      >{{
+        gb_tag_map[item]
+        }}
+      </van-tag>
+      <view class="price">
+        价格:￥{{dramaDetail.gb_price}}
+      </view>
+
+    </view>
+  </view>
+  <view class="Card">
+    <view class="form">
+      <view>
+        开车日期
+      </view>
+      <view bindtap="showPopup" style="margin-left:20px">
+        {{subscribe_start}}
+      </view>
+    </view>
+
+  </view>
+
+  <view class="Card">
+    <view class="form">
+      <view>
+        选择店铺
+      </view>
+      <view bindtap="showShorePopup" style="margin-left:20px">
+        {{store.name}}
+      </view>
+    </view>
+  </view>
+
+  <view class="Card">
+    <view class="form">
+      <view>
+        备注
+      </view>
+      <input style="margin-left:20px">
+
+      </input>
+    </view>
+  </view>
+  <view class="bottombtn">
+    <button
+      bindtap="submitForm"
+      style="width:80%"
+      type="primary"
+    >发起拼车
+    </button>
+  </view>
+
+</view>
+
+<!--  时间选择 -->
+<van-popup
+  position="bottom"
+  custom-style="width:100%"
+  show="{{ show }}"
+  bind:close="onClose"
+>
+  <van-datetime-picker
+    bind:confirm="confirmDate"
+    type="datetime"
+    value="{{ currentDate }}"
+    bind:input="onInput"
+    min-date="{{ minDate }}"
+    formatter="{{ formatter }}"
+  />
+</van-popup>
+
+<van-action-sheet
+  show="{{ showstore }}"
+  actions="{{ storeactions }}"
+  bind:close="onCloseStore"
+  bind:select="onSelectStore"
+/>
+

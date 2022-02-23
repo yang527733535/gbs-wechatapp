@@ -1,1 +1,135 @@
 /* pages/my/index.wxss */
+.myUser {
+  position: relative;
+  text-outline: -10px;
+}
+
+.contanier {}
+
+.header {
+  /* color: white; */
+}
+
+.userInfo {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  display: flex;
+}
+
+.boxSha {
+  margin: 10px;
+  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  opacity: 1;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.register {
+  padding: 40rpx;
+}
+
+.register_word {
+  font-size: 37rpx;
+  font-weight: 700;
+  font-family: Helvetica, sans-serif;
+}
+
+.userInfo_avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userInfo_userDetail {
+  padding: 10px;
+}
+
+.userInfo_userDetail_id {
+  margin-top: 5px;
+  font-size: 15px;
+  /* font-weight: 500;a */
+}
+
+.userInfo_userDetail_name {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.userInfo_avatar_IMG {
+  width: 100%;
+  height: 100%;
+}
+
+.account {
+  /* display: flex;
+  padding: 5px; */
+  /* page-break-after: auto; */
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.rmb {
+  font-weight: 700;
+  font-size: larger;
+  margin-left: 15px;
+}
+
+.account_item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.UserCard {
+  height: 90px;
+  margin: 13px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.15);
+  display: flex;
+  /* background-color: white; */
+}
+
+.account_item_icon {
+  width: 25px;
+  height: 25px;
+}
+
+.UserCard_item {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register_btn {
+
+  background-color: #FFD32D;
+  border-radius: 30rpx;
+  font-size: 36rpx;
+  font-weight: bolder;
+  margin-top: 20rpx;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.btnContent {
+  margin: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+}

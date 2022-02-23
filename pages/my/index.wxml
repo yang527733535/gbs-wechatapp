@@ -1,2 +1,96 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="contanier">
+
+  <view class="header">
+    <view wx:if="{{!isLogin}}" class="register">
+      <view class="register_word">欢迎来到梦墨·梦绘馆</view>
+      <button bindtap="handleGetUserInfo" class="register_btn">
+        <van-icon name="wechat" />
+        微信一键登录
+      </button>
+    </view>
+    <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber2">获取手机</button> -->
+    <view class="boxSha">
+      <view wx:if="{{isLogin}}" class="userInfo">
+        <view bindtap="bingGetOpenID" class="userInfo_avatar">
+          <image class="userInfo_avatar_IMG" src="{{userInfo.avatar_url}}" />
+        </view>
+        <view class="userInfo_userDetail">
+          <view class="userInfo_userDetail_name">
+            <text>{{userInfo.nick_name}}</text>
+            <van-tag
+              color='#2A9D8F'
+              style="margin-left:5px"
+              type="primary"
+            >
+              {{memberMap[userInfo.member_type]}}
+            </van-tag>
+          </view>
+          <!-- <view class="userInfo_userDetail_id">微会员</view> -->
+        </view>
+      </view>
+      <view wx:if="{{isLogin}}" class="account">
+        <view class="rmb">
+          <view>余额</view>
+          <view>¥{{userInfo.balance_use || 0}}</view>
+        </view>
+        <view>
+          <van-button bind:click="gotoChongzhi" type="primary">账户充值
+          </van-button>
+        </view>
+        <!-- <view bindtap="clickPoints" class="account_item">
+          <image class="account_item_icon" src="./icons8-badge-50.png" />
+          <view>0</view>
+          <view>剧本积分</view>
+        </view> -->
+        <!-- <view class="account_item">
+          <view>
+            <view>0.00</view>
+            <view>余额</view>
+          </view>
+        </view> -->
+        <!-- <view bindtap="chongzhi" class="account_item">
+          <van-tag bindtap="chongzhi" size="large" type="primary">充值
+          </van-tag>
+        </view> -->
+      </view>
+    </view>
+
+  </view>
+  <!-- <view class="UserCard">
+
+    </view> -->
+  <view class="btnContent" wx:if="{{isLogin}}">
+    <van-cell-group>
+      <van-cell
+        click="clickItem"
+        is-link
+        url="/pages/userinfo/index"
+        icon="user-circle-o"
+        title="会员信息"
+      />
+      <van-cell
+        icon="orders-o"
+        is-link
+        url="/pages/coupons/index"
+        title="我的订单"
+        is-link
+      />
+      <van-cell
+        bindtap="gotoJoin"
+        icon="user-circle-o"
+        title="加入游戏"
+      />
+      <van-cell
+        icon="newspaper-o"
+        title="我想玩的本"
+        is-link
+      />
+      <van-cell
+        icon="orders-o"
+        title="我玩过的本"
+        is-link
+      />
+    </van-cell-group>
+  </view>
+</view>
+

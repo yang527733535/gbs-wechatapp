@@ -1,0 +1,114 @@
+<view>
+  <van-sticky>
+    <view style="opacity:{{1}}" class="search-contianer">
+      <view
+        bindtap="gotoback"
+        class="search"
+        style="height:{{navHeight}}px;padding-top:{{navTop}}px;background:rgba(255, 255, 255,{{opacity}}); "
+      >
+        <van-icon style="opacity:1" name="arrow-left" />
+        <image
+          style="margin-left:5px"
+          class="logo"
+          src="{{dramaDetail.gb_cover}}"
+        ></image>
+        <view
+          class="myheadtitle"
+          placeholder-class="search-placeholder"
+          style="width:{{menuButtonObject.left-18-((132/52)*(navHeight-navTop-15))}}px"
+          type="text"
+        >
+          <view> {{dramaDetail.gb_title}}</view>
+        </view>
+      </view>
+
+    </view>
+  </van-sticky>
+  <van-transition name="fade-up">
+    <view>
+      <view class="detailContent">
+        <view class="detailContent_baseInfo">
+          <view class="detailContent_baseInfo_img">
+            <image class="detailContent_baseInfo_img_IMG" src="{{dramaDetail.gb_cover}}"></image>
+          </view>
+
+          <view class="detailContent_baseInfo_word">
+            <view style="color:black" class="dramatitle">{{dramaDetail.gb_title}}</view>
+            <!-- <view class="publish">{{dramaDetail.gb_producer}}</view> -->
+            <view decode="{{true}}" class="detail_msg">
+              <view style="margin-right:10rpx"> {{dramaDetail.gb_people_note}} </view>
+              <view style="margin-right:10rpx">{{dramaDetail.gb_hour}}小时</view>
+            </view>
+            <view>难度: {{levelMap[dramaDetail.gb_level] }}</view>
+            <view>{{dramaDetail.gb_theme}}</view>
+            <view class="price">价格:¥{{dramaDetail.gb_price}}/人</view>
+          </view>
+        </view>
+
+        <view bindtap="toggleMore" class="drama_bref">
+          <view>剧本简介</view>
+          <view>
+            <van-button
+              data-gb_code="{{item.gb_code}}"
+              bindtap="gotoDramaDesc"
+              round
+              type="info"
+              size="small"
+            >预约组局
+            </van-button>
+          </view>
+          <!-- <view wx:if="{{!more}}" class="more">收起
+            <van-icon name="arrow-up" />
+          </view>
+          <view wx:if="{{more}}" class="more"> 展开
+            <van-icon name="arrow-down" />
+          </view> -->
+        </view>
+        <view bindtap="toggleMore" class="gb_text_brief {{more?'textellipsis':''}} ">{{dramaDetail.gb_text_content}}
+        </view>
+        <view class="role_bref">
+          <view style="margin-bottom:10px">人物介绍</view>
+          <view class="roleContanier">
+            <view
+              wx:key="role_code"
+              wx:for="{{dramaDetail.drama_roles}}"
+              class="role_item"
+            >
+              <view class="role_item_img">
+                <image class="role_item_img_IMG" src="{{item.role_cover}}"></image>
+              </view>
+              <view class="role_name">{{item.role_name}}</view>
+              <view class="role_bref_desc">{{item.role_brief}}</view>
+            </view>
+          </view>
+        </view>
+
+        <view class="dramaRec" style="margin-bottom:10px">剧本推荐</view>
+        <view class="dramaRec_content">
+
+          <view
+            wx:key="gb_id"
+            bindtap="gotoDetail"
+            data-gb_code="{{item.gb_code}}"
+            wx:for="{{dramaList}}"
+            class="DramaItem"
+          >
+            <view class="DramaItem_img">
+              <image class="DramaItem_img_IMG" src="{{item.gb_cover}}"></image>
+            </view>
+            <view class="DramaItem_title">{{item.gb_title}}</view>
+            <view class="DramaItem_theme">{{item.gb_theme}}</view>
+
+          </view>
+
+        </view>
+        <view class="changeOther">
+          <van-icon name="replay" />
+          换一批
+        </view>
+      </view>
+    </view>
+
+  </van-transition>
+</view>
+

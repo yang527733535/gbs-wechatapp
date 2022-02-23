@@ -1,2 +1,25 @@
-<!--pages/group/index.wxml-->
-<text>pages/group/index.wxml</text>
+<view>
+  <van-search value="{{ value }}" placeholder="请输入剧本名称" />
+  <view 
+  bindtap="gotocardetail"
+  wx:for="{{carlist}}"  class="caritem">
+    <view class="bookcover">
+      <image class="bookcover_img" src="https://img1.doubanio.com/view/photo/l/public/p2681362557.webp"></image>
+    </view>
+    <view class="carinfo">
+      <view>国王排名</view>
+      <view>
+        <van-tag style="margin-right:10rpx" color="#f2826a" size="medium">还原</van-tag>
+        <van-tag style="margin-right:10rpx" color="#f2826a" size="medium">推理</van-tag>
+      </view>
+      <view class="small_word">时间:2022-01-03(周一)12:00</view>
+      <view class="small_word">难度:进阶</view>
+      <view class="small_word">门店:梦墨梦绘馆</view>
+      <view class="small_word">
+        <van-tag round type="success">组队中</van-tag> 0/6
+      </view>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,69 @@
+<view class="mycard">
+    <view class="pointsInfo">
+        <view class="pointsInfo_left">
+            <view class="pointsInfo_left_score">0</view>
+            <view bindtap="redictoRecord">
+                积分记录
+                <van-icon name="arrow" />
+            </view>
+        </view>
+        <view class="pointsInfo_rigth">
+            <view class="pointsInfo_rigth_item">点击签到</view>
+        </view>
+    </view>
+</view>
+<view>
+    <van-tabs active="{{ active }}" bind:change="onChange">
+        <van-tab title="优惠券">
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button bindtap="clickDh" color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+        </van-tab>
+        <van-tab title="实物">
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+            <van-card num="1" currency='积分:' tag="人气" price="10.00" desc="描述信息" title="商品标题" thumb="{{ imageURL }}">
+                <view slot="footer">
+                    <van-button color='black' size="mini">兑换</van-button>
+                </view>
+            </van-card>
+        </van-tab>
+    </van-tabs>
+    <van-dialog id="van-dialog" />
+</view>
+<van-toast id="van-toast" />

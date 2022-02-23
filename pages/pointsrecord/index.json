@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index"
+  },
+  "navigationBarTitleText": "积分记录",
+  "navigationBarBackgroundColor": "#011627",
+  "backgroundColor": "#011627",
+  "navigationBarTextStyle": "white"
+}

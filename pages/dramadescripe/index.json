@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "van-popup": "@vant/weapp/popup/index",
+    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
+    "van-action-sheet": "@vant/weapp/action-sheet/index",
+    "van-tag": "@vant/weapp/tag/index"
+  },
+  "navigationBarBackgroundColor": "#252331",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "发起拼车",
+  "enablePullDownRefresh": false
+}

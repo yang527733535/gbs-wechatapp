@@ -1,0 +1,56 @@
+.money_num {
+  font-size: 40rpx;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.money_num2 {
+  font-size: 40rpx;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 10px;
+  color: #da1212;
+}
+
+.myczbox {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.select_czitem {
+  flex-shrink: 0;
+  height: 60px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  background: #07c160;
+  border-radius: 8px;
+  color: white;
+  font-size: 40rpx;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no_select_czitem {
+  flex-shrink: 0;
+  height: 60px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 100px;
+  /* background: #07c160; */
+  border-radius: 8px;
+  border: 1px solid #07c160;
+  font-size: 40rpx;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btnbx {
+  margin: 10px;
+}

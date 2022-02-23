@@ -1,0 +1,100 @@
+<view class="shouye">
+  <van-notice-bar custom-class='info' left-icon="volume-o" text="门店通告:会员充值活动正在进行中,各种优惠福利等着你们来,充值1000送20,快快加入我们吧" />
+  <van-transition show="{{ show }}" custom-class="block">
+    <view class="content">
+      <view bindtap="gotoBook" class="content_left">
+        <view class="content_left_word">
+          <view class="content_left_word_first">
+            剧本列表
+            <van-icon name="arrow" />
+          </view>
+          <view class="content_left_word_second">立即开启一段美妙征程</view>
+          <view></view>
+        </view>
+      </view>
+      <view class="content_rigth">
+        <view bindtap="gotoCar" class="content_rigth_group">
+          <view class="content_rigth_group_word">
+            <view class="content_rigth_group_word_first">
+              组局发车
+              <van-icon name="arrow" />
+            </view>
+            <view class="content_left_word_second">快来加入</view>
+            <view class="player">
+              <view class="player_item">
+                <van-image round width="25" height="25" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+              </view>
+              <view class="player_item">
+                <van-image round width="25" height="25" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+              </view>
+              <view class="player_item">
+                <van-image round width="25" height="25" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+              </view>
+              <view>...</view>
+            </view>
+          </view>
+          <view class="myCarimg">
+            <van-icon name="friends-o" />
+          </view>
+        </view>
+        <view bindtap="gotoMember" class="content_rigth_number">
+          <view class="content_rigth_group_word">
+            <view class="content_rigth_group_word_first">
+              会员中心
+              <van-icon name="arrow" />
+            </view>
+            <view class="content_left_word_second">加入会员</view>
+          </view>
+          <view class="mumberimg">
+            <van-icon name="vip-card" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </van-transition>
+  <van-transition custom-class="block">
+    <view class="dmcard cardBodyColor">
+      <view class="dmcard_header">
+        <view class="dmcard_header_left">
+          <view>
+            <image class="dmcard_img" src="../../icons/shouye/zhuchiren.png"></image>
+          </view>
+          <view class="cardtitle">店内DM</view>
+        </view>
+        <view>
+          <van-icon name="arrow" />
+        </view>
+      </view>
+      <scroll-view scroll-x="true">
+        <view class="dm_wrap">
+          <view wx:for="{{dmlist}}" class="dmitemcontent">
+            <view>
+              <image class="dmitemcontent_img" 
+              src='{{item.user_photo}}'
+            ></image>
+            </view>
+            <view class="dm_name">
+              {{item.user_nick}}
+              <image class="dm_sex" src="../../icons/shouye/women.png"></image>
+            </view>
+            <view class="dm_info">带本526场</view>
+          </view>
+          <view wx:for="{{dmlist}}" class="dmitemcontent">
+            <view>
+              <image class="dmitemcontent_img" 
+              src='{{item.user_photo}}'
+            ></image>
+            </view>
+            <view class="dm_name">
+              {{item.user_nick}}
+              <image class="dm_sex" src="../../icons/shouye/women.png"></image>
+            </view>
+            <view class="dm_info">带本526场</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </van-transition>
+  <!-- <view bindtap="gotoMAP" class="arrdress">店铺地址</view> -->
+  <!-- pages/map/index -->
+</view>

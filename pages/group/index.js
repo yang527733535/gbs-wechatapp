@@ -5,14 +5,37 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    carlist: [1, 2, 3, 4, 5]
+  },
+  gotocardetail() {
+    wx.navigateTo({
+      url: "/pages/cardetail/index",
+    })
+  },
+  async getDramaListData() {
+    const result = await request({
+      url: "/xcx/drama/search",
+      method: "post",
+    });
+    const {
+      data,
+      paginator
+    } = result.data
+    this.setData({
+      dramaNumber: paginator.total_count,
+      dramaList: data.map((item) => {
+        return {
+          ...item,
+          gb_theme: item.gb_theme.split('/')
+        }
+      })
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
   },
 
   /**

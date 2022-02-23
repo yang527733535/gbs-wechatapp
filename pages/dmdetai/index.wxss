@@ -1,0 +1,54 @@
+.img {
+  height: 240px;
+  /* background-color: oldlace; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.exit {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  z-index: 2;
+  /* background: chartreuse; */
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.DMimg {
+  height: 100%;
+}
+
+.dmdetail {
+  /* height: 80vh; */
+  background-color: white;
+  /* margin: 10px; */
+  padding: 10px;
+}
+
+.firstLine {
+  /* display: grid; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.dmname {
+  font-weight: 700;
+  font-size: 36rpx;
+  font-family: Helvetica;
+}
+
+
+.other {
+  color: #CCC;
+  margin-top: 6px;
+  font-family: Helvetica;
+}
+
+.mg5 {
+  margin-top: 5px;
+}

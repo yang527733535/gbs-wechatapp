@@ -1,0 +1,22 @@
+<view class="hhbox ">
+  <view class="money_num">
+    账户余额
+  </view>
+  <view class="money_num2">
+    ¥{{balance_use}}
+  </view>
+</view>
+
+<view class="hhbox myczbox">
+  <view bindtap="clickCount" wx:for="{{chongzhiArr}}" data-countinfo="{{item}}"
+    class="{{item.id===nowSelectCount.id?'select_czitem':'no_select_czitem'}}">
+    {{item.count}}
+  </view>
+
+</view>
+
+<view class="btnbx">
+  <van-button bind:click="numberrecharge" type="primary" size="large">
+    立即充值
+  </van-button>
+</view>

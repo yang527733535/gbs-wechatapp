@@ -1,5 +1,20 @@
 {
   "dependencies": {
-    "@vant/weapp": "^1.9.2"
-  }
+    "@vant/weapp": "^1.9.2",
+    "weui-miniprogram": "^1.2.2"
+  },
+  "name": "gbs",
+  "version": "1.0.0",
+  "description": "mp",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://gitlab.toptian.com/business/gbs-app.git"
+  },
+  "author": "",
+  "license": "ISC"
 }

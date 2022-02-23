@@ -1,4 +1,13 @@
 {
   "component": true,
-  "usingComponents": {}
+  "usingComponents": {
+    "van-sticky": "@vant/weapp/sticky/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-grid": "@vant/weapp/grid/index",
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "UserInfo": "./userinfoform/index"
+  },
+  "navigationBarBackgroundColor": "#F0F0FA"
 }

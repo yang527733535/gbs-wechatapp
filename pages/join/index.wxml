@@ -1,0 +1,7 @@
+<view class="mycell" >
+  <van-cell-group inset>
+    <van-cell title="选择店铺" value="内容" />
+    <van-cell title="选择房间" value="内容" />
+  </van-cell-group>
+  <button class="mybtn" type="primary">加入游戏</button>
+</view>

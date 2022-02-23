@@ -4,15 +4,9 @@
     "ignore": []
   },
   "setting": {
-    "packNpmRelationList": [
-      {
-        "packageJsonPath": "./package.json",
-        "miniprogramNpmDistDir": "./miniprogram/"
-      }
-    ],
     "urlCheck": true,
     "es6": true,
-    "enhance": false,
+    "enhance": true,
     "postcss": true,
     "preloadBackgroundData": false,
     "minified": true,
@@ -26,7 +20,7 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
-    "compileHotReLoad": false,
+    "compileHotReLoad": true,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
     "useApiHostProcess": true,
@@ -41,12 +35,18 @@
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.21.0",
-  "appid": "wx1182d93355d648d3",
-  "projectname": "剧本杀线下助手演示",
+  "libVersion": "2.22.0",
+  "appid": "wx3c4494bd813a40ef",
+  "projectname": "%E6%A2%A6%E5%A2%A8%E7%BB%98%E6%A2%A6%E9%A6%86",
   "debugOptions": {
     "hidedInDevtools": []
   },

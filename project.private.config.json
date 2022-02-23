@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -15,6 +16,84 @@
           "name": "剧本",
           "pathName": "pages/book/index",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人信息",
+          "pathName": "pages/userinfo/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "券",
+          "pathName": "pages/coupons/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "剧本页",
+          "pathName": "pages/book/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "剧本积分",
+          "pathName": "pages/points/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "积分记录",
+          "pathName": "pages/pointsrecord/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "小卖部",
+          "pathName": "pages/smallshop/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "车队详情",
+          "pathName": "pages/cardetail/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "地图",
+          "pathName": "pages/map/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "剧本详情",
+          "pathName": "pages/drama/detail",
+          "query": "gb_code=GB2022011501415",
+          "scene": null
+        },
+        {
+          "name": "预约组局",
+          "pathName": "pages/dramadescripe/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单列表",
+          "pathName": "pages/coupons/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加入游戏",
+          "pathName": "pages/join/index",
+          "query": "store_code=ZS220100013&room_code=ZS220100013R010",
           "scene": null
         }
       ]

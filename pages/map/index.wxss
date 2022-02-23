@@ -1,0 +1,94 @@
+.map {
+  width: 100vw;
+  height: 30vh;
+}
+
+.map-page {
+  position: relative;
+}
+
+.addressitem {
+  /* height: 150rpx; */
+  width: 100vw;
+  padding: 20rpx;
+  padding-bottom: 0rpx;
+  font-size: 32rpx;
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  margin: 5px;
+}
+
+.phone {
+  text-decoration: underline;
+}
+
+.addressitem_icon {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addresstext {
+  width: 260px;
+  /* background-color: peachpuff; */
+}
+
+.addressitem_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: medium;
+  font-weight: bolder;
+}
+
+.gary {
+  color: gray;
+  font-size: smaller;
+}
+
+.myimg {
+  height: 70rpx;
+  width: 70rpx;
+}
+
+.shopItem {
+  /* width: 200px; */
+  /* height: 100px; */
+  margin: 15px;
+  /* background: rgba(0, 0, 0, 0); */
+  background-color: white;
+  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  opacity: 1;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+page {
+  background-color: #f7f8fa;
+}
+
+.shop_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shopname {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+
+.distance {
+  color: #ccc;
+  font-size: 23rpx;
+}
+
+.tel {
+  margin-top: 10px;
+  font-size: 23rpx;
+  color: #ccc;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

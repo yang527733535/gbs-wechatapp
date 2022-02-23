@@ -1,5 +1,12 @@
 @import "/miniprogram_npm/@vant/weapp/common/index.wxss";
 
+page {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica,
+    Segoe UI, Arial, Roboto, "PingFang SC", "miui", "Hiragino Sans GB",
+    "Microsoft Yahei", sans-serif;
+  background-color: #f0f0fa;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -10,7 +17,7 @@
 
 .space {
   height: 20rpx;
-  background-color: #F2f2f2;
+  background-color: #f2f2f2;
 }
 
 .safeAreaOldPaddingBttom {
@@ -72,12 +79,6 @@
   width: 100vw !important;
 }
 
-page {
-  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
-    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
-    sans-serif;
-}
-
 .block-btn {
   padding: 0 32rpx;
 }
@@ -93,4 +94,60 @@ page {
   padding: 0 24rpx;
   font-size: 24rpx;
   color: #999;
+}
+
+.small_word {
+  font-size: small;
+}
+
+@media (prefers-color-scheme: dark) {
+  page {
+    /* background-color: #000; */
+    background-color: rgba(25, 26, 28, 1);
+    color: #fff;
+  }
+}
+
+.darkcardBodyColor {
+  background-color: rgba(35, 35, 38, 1);
+  box-shadow: 0px 15px 10px -22px #000;
+}
+
+.cardBodyColor {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 15px 10px -22px #000;
+}
+
+.dramatitle {
+  font-size: 36rpx;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+::-webkit-scrollbar {
+  width: 0 !important;
+  display: none;
+  /* Chrome Safari */
+  -webkit-appearance: none;
+  width: 0;
+  height: 0;
+}
+
+.hhbox {
+  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  opacity: 1;
+  border-radius: 8px;
+  margin: 10px;
+  background: white;
+  padding: 10px;
+}
+
+.hhbox2 {
+  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  opacity: 1;
+  border-radius: 8px;
+  /* margin: 10px; */
+  background: white;
+  padding: 10px;
 }

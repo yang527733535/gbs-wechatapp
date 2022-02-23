@@ -1,0 +1,8 @@
+/* /* pages/join/index.wxss * */
+.mybtn {
+  margin: 20px;
+}
+
+.mycell {
+  margin-top: 10px;
+}

@@ -1,4 +1,15 @@
 {
+  "component": true,
+  "navigationBarTitleText": "剧本列表",
   "enablePullDownRefresh": true,
-  "navigationStyle": "custom"
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "van-tab": "@vant/weapp/tab/index",
+    "van-tabs": "@vant/weapp/tabs/index",
+    "van-loading": "@vant/weapp/loading/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-search": "@vant/weapp/search/index"
+  },
+  "disableScroll": true,
+  "navigationBarBackgroundColor": "#F0F0FA"
 }

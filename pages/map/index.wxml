@@ -1,0 +1,73 @@
+<view class="mapcontent">
+  <van-search value="{{ shopinputvalue }}" placeholder="请输入店铺列表" />
+  <view
+    bindtap="gotoShopDetail"
+    data-shopinfo="{{item}}"
+    wx:for="{{shoplist}}"
+    class="shopItem"
+  >
+    <view class="shop_title">
+      <view class="shopname">
+        {{item.store_name}}
+      </view>
+      <view class="distance">
+        {{item.distance}}km
+      </view>
+    </view>
+    <view class="tel">
+      <van-icon name="phone-o" />
+      联系电话:{{item.store_phone}}
+    </view>
+    <view class="tel">
+      <van-icon name="location-o" />
+      位置:{{item.position_address}}
+    </view>
+
+  </view>
+  <!-- <map
+    show-location
+    bindmarkertap="onMarkerTap"
+    class="map"
+    id="map"
+    latitude="{{setting.latitude}}"
+    longitude="{setting.longitude}}"
+    markers="{{markers}}"
+    scale="{{seting.scale}}"
+    setting="{{setting}}"
+  >
+  </map> -->
+</view>
+<view class="map-view-container">
+  <copy-dialog
+    show="{{dialogShow}}"
+    link="{{link}}"
+    bindclose="onDialogClose"
+  ></copy-dialog>
+</view>
+<!-- <view class="addresslist">
+
+  <view wx:for="{{markers}}" class="addressitem">
+    <view class="addressitem_info">
+      <view>{{item.name}}</view>
+      <view class="gary addresstext">地址:{{item.address}}</view>
+      <view
+        class="gary"
+        bindtap="makePhoneCall"
+        data-phone-number="15361479020"
+      >
+        <van-icon name="phone-o" />
+        电话:
+        <text class="phone"> 15361479020</text>
+      </view>
+      <view class="gary">
+        <van-icon name="location-o" />
+        距离: {{item.distance /1000}}km
+      </view>
+    </view>
+    <view bindtap="onNavigationTap" class="addressitem_icon">
+      <image class="myimg" src="./navigate.png"></image>
+    </view>
+  </view>
+  <van-divider/>
+</view> -->
+

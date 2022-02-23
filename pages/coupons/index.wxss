@@ -1,0 +1,54 @@
+.mgt {
+  margin-top: 4px;
+}
+.btngroup {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.ordertext {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ordernum {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: red;
+}
+
+.paycontent {
+  padding: 20px;
+}
+
+.payway {
+  display: flex;
+  height: 120px;
+}
+
+.pay1 {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.pay2 {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+}
+
+.payimg {
+  height: 50px;
+  width: 50px;
+}

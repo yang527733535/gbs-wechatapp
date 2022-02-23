@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-skeleton": "@vant/weapp/skeleton/index"
+  },
+  "navigationBarTitleText": "车队详情",
+  "navigationBarBackgroundColor": "#011627",
+  "navigationBarTextStyle": "white"
+}

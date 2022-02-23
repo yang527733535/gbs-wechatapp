@@ -1,0 +1,4 @@
+/* pages/userinfo/index.wxss */
+.btn{
+  margin-top: 40px;
+}

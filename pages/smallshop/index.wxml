@@ -1,0 +1,78 @@
+<view class="shopContanier">
+  <view class="shopContanier_left">
+    <scroll-view scroll-y="true" class="shopContanier_left_content">
+      <van-sidebar active-key="{{ activeKey }}">
+        <van-sidebar-item title="零食" />
+        <van-sidebar-item title="啤酒" />
+        <van-sidebar-item title="白酒" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="标签名" />
+        <van-sidebar-item title="" />
+        <van-sidebar-item title="" />
+        <van-sidebar-item title="" />
+      </van-sidebar>
+    </scroll-view>
+
+  </view>
+  <scroll-view scroll-y="true" class="shopContanier_rigth">
+    <van-divider contentPosition="center">零食</van-divider>
+
+
+
+
+    <view wx:for="{{goods_list}}" wx:for-index="goodId" class="shopContanier_rigth_item">
+      <view class="item_img">
+        <image  class="item_img_img" src="{{item.imgUrl}}">
+        </image>
+      </view>
+      <view class="item_info">
+        <view class="item_info_left">
+          <view class='goodName'> {{item.goodName}}</view>
+          <view class="kc">库存:{{item.stockNum}}</view>
+          <view class="price">￥{{item.price}}</view>
+        </view>
+        <view class="item_info_rigth">
+          <van-stepper data-goods_id="{{item.goods_id}}" data-price="{{item.price}}" bind:change="handleCartAdd"
+            value="{{ item.nowCartNum }}" min="0" max="8" />
+        </view>
+      </view>
+    </view>
+
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+    <view class="shopContanier_rigth_item">GoodsItem</view>
+  </scroll-view>
+  <view class="car">
+
+    <van-submit-bar price="{{ 3050 }}" button-text="提交订单" bind:submit="onSubmit" />
+  </view>
+  <view wx:if="{{!show}}" bindtap="showPopup" class="carButton">
+
+    <van-icon info="{{AllCartNum}}" size="30px" color="white" name="shopping-cart-o" />
+  </view>
+
+  <van-popup custom-style="height: 40%" position="bottom" show="{{ show }}" bind:close="onClose">内容</van-popup>
+</view>

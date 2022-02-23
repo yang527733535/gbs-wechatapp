@@ -1,56 +1,250 @@
-<view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+<view class="shouye">
+  <van-sticky>
+    <view class="search-contianer">
+      <view class="search" style="height:{{navHeight}}px;padding-top:{{navTop}}px">
+        <view class="imgbox">
+          <image
+            referrer-policy="no-referrer"
+            class="logo"
+            src="https://oss.mengmohmg.com/logo/mengmo.png"
+          ></image>
         </view>
-      </van-card>
-    </view>
-  </view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+
+        <view class="store_name">
+          <view bindtap="gotoMAP">
+            <van-icon name="shop-o" />
+            {{selectedShop['store_name']}}
+            <van-icon name="arrow" />
+          </view>
         </view>
-      </van-card>
+      </view>
     </view>
-  </view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+  </van-sticky>
+
+  <view class="indexContent">
+    <view class="headDesc">
+      <view class="headDesc_title">
+        <view class="headDesc_title_line"></view>
+        热门剧本
+      </view>
+      <view bindtap="gotoBook" class="headDesc_more">
+        更多
+        <view class="dot">
+          <view class="dot_1"></view>
+          <view class="dot_2"></view>
+          <view class="dot_3"></view>
         </view>
-      </van-card>
+      </view>
     </view>
-  </view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+    <view>
+      <view class="Dramacontent">
+        <view
+          bindtap="gotoDramaDetail"
+          data-gb_code="{{item.gb_code}}"
+          wx:for="{{hotDramaList}}"
+          class="Dramaitem"
+        >
+          <view class="DMitem_img">
+            <image
+              referrerPolicy="no-referrer"
+              class="mydmimg"
+              src="{{item.gb_cover}}"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+          </view>
         </view>
-      </van-card>
+      </view>
     </view>
+
   </view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+
+  <view class="indexContent">
+    <view class="headDesc">
+      <view class="headDesc_title">
+        <view class="headDesc_title_line"></view>
+        门店公告
+      </view>
+
+    </view>
+    <view class="gonggao">
+      <view wx:for="{{noticeList}}">
+        <view class="gonggaotext">
+          {{item.notice_title}}
         </view>
-      </van-card>
-    </view>
-  </view>
-  <view class="category-container">
-    <view class="category-box">
-      <van-card num="" tag="城限" price="158/位" desc="22世纪,地球已不再是人类的唯一家园。" title="七秒永夜"
-        thumb="http://cdnoss.stardustgod.com/chapters/image/202109/61556771c4d7f.jpg">
-        <view slot="footer">
+        <view class="gonggaoline">
         </view>
-      </van-card>
+      </view>
     </view>
+
   </view>
+
+  <view class="indexContent">
+    <view class="headDesc">
+      <view class="headDesc_title">
+        <view class="headDesc_title_line"></view>
+        剧本目录
+      </view>
+      <view class="headDesc_more">
+        更多
+        <view class="dot">
+          <view class="dot_1"></view>
+          <view class="dot_2"></view>
+          <view class="dot_3"></view>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view class="mulu">
+        <view class="muluscrollBox">
+          <view
+            bindtap="gotoDramaDetail"
+            data-gb_code="{{item.gb_code}}"
+            wx:for="{{hotDramaList}}"
+            class="muluitem hhbox2"
+          >
+            <view class="left_img">
+              <image
+                class="myleft_img"
+                src="{{item.gb_cover}}"
+                mode="aspectFit|aspectFill|widthFix"
+                lazy-load="false"
+                binderror=""
+                bindload=""
+              />
+
+            </view>
+            <view class="rigth_content">
+              <view class="contentword">{{item.gb_title}} </view>
+              <view>
+                <van-tag color='#efc4ee' type="primary">{{item.gb_theme}}</van-tag>
+              </view>
+              <view class="num2">
+                <van-icon name="friends-o" />
+                {{item.gb_people_note}}·
+                <van-icon name="underway-o" />
+                {{item.gb_hour}}小时
+              </view>
+              <view class="num">￥298 </view>
+            </view>
+          </view>
+        </view>
+
+        <!-- <view
+          bindtap="gotoDramaDetail"
+          data-gb_code="{{item.gb_code}}"
+          wx:for="{{hotDramaList}}"
+          class="muluitem"
+        >
+          <view class="muluitem_img">
+            <image
+              class="muluitem_img_IMG"
+              src="{{item.gb_cover}}"
+              mode="aspectFit|aspectFill|widthFix"
+              lazy-load="false"
+              binderror=""
+              bindload=""
+            />
+          </view>
+          <view class="muluitem_text">
+            <view>
+              {{item.gb_title}}
+            </view>
+            <view>
+              <van-tag color="#7232dd">{{item.gb_theme}}</van-tag>
+            </view>
+            <view class="otherinfo">
+              <van-icon name="friends-o" />
+              {{item.gb_people_note}}
+              <van-icon name="clock-o" />
+              {{item.gb_hour}}小时
+            </view>
+            <view class="price">¥{{item.gb_price}} </view>
+
+          </view>
+        </view> -->
+
+      </view>
+    </view>
+
+  </view>
+
+  <view class="indexContent">
+    <view class="headDesc">
+      <view class="headDesc_title">
+        <view class="headDesc_title_line"></view>
+        店内DM
+      </view>
+    </view>
+    <view class="DMcontent">
+      <view
+        bindtap="gotoDMdetail"
+        wx:for="{{dmlist}}"
+        data-dmaccout="{{item.user_account}}"
+        class="DMitem"
+      >
+        <view class="DMitem_img">
+          <image
+            referrerPolicy="no-referrer"
+            class="mydmimg"
+            src="{{item.user_photo}}"
+            mode="aspectFit|aspectFill|widthFix"
+            lazy-load="false"
+            binderror=""
+            bindload=""
+          />
+        </view>
+        <view class="DMitem_NAME">
+          {{item.user_nick}}
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+  <!-- <van-notice-bar custom-class='info' left-icon="volume-o" text="门店通告:会员充值活动正在进行中,各种优惠福利等着你们来,充值1000送20,快快加入我们吧" /> -->
+  <!-- <view class="dmcard cardBodyColor">
+      <view class="dmcard_header">
+        <view class="dmcard_header_left">
+          <view>
+            <image class="dmcard_img" src="../../icons/shouye/zhuchiren.png"></image>
+          </view>
+          <view class="cardtitle">店内DM</view>
+        </view>
+        <view>
+          <van-icon name="arrow" />
+        </view>
+      </view>
+      <scroll-view scroll-x="true">
+        <view class="dm_wrap">
+          <view wx:for="{{dmlist}}" class="dmitemcontent">
+            <view>
+              <image class="dmitemcontent_img" 
+              src='{{item.user_photo}}'
+            ></image>
+            </view>
+            <view class="dm_name">
+              {{item.user_nick}}
+              <image class="dm_sex" src="../../icons/shouye/women.png"></image>
+            </view>
+            <view class="dm_info">带本526场</view>
+          </view>
+          <view wx:for="{{dmlist}}" class="dmitemcontent">
+            <view>
+              <image class="dmitemcontent_img" 
+              src='{{item.user_photo}}'
+            ></image>
+            </view>
+            <view class="dm_name">
+              {{item.user_nick}}
+              <image class="dm_sex" src="../../icons/shouye/women.png"></image>
+            </view>
+            <view class="dm_info">带本526场</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view> -->
 </view>
+

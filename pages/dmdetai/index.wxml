@@ -1,0 +1,18 @@
+<view class="img">
+  <view bindtap="exitPage" class="exit">
+    <van-icon name="arrow-left" />
+  </view>
+  <image class="DMimg" src="{{dmdetail.user_photo}}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="dmdetail hhbox">
+  <view class="firstLine">
+    <view class="dmname">{{dmdetail.user_nick}}</view>
+    　
+    <view>{{dmdetail.user_gender}}</view>
+    　 <view>♓　{{dmdetail.star_sign}}</view>
+  </view>
+
+  <view class="other">加入时间:{{dmdetail.join_date}}</view>
+  <view class="dmname mg5">自我介绍</view>
+  <view class="other">加入时间: {{dmdetail.user_brief}}</view>
+</view>

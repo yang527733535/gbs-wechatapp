@@ -1,0 +1,17 @@
+<form catchsubmit="formSubmit">
+
+  <van-field label="昵称" model:value="{{ nick }}" placeholder="请输入昵称" clearable input-align="right" />
+  <picker bindchange="bindPickerChange" value="{{ genderIndex }}" range="{{genderArray}}">
+    <van-cell title="性别" value="{{ gender }}" is-link />
+  </picker>
+  <van-field wx:if="{{true}}"  model:value="{{ apiUserInfoMap.base.mobile }}" center readonly clearable label="手机号码" use-button-slot>
+    <van-button 
+    bindgetphonenumber="getPhoneNumber"
+    color="#011627" slot="button" type="primary" size="small" open-type="getPhoneNumber">重新绑定</van-button>
+  </van-field>
+  <van-field wx:for="{{apiUserInfoMap.ext}}" wx:for-index='k' wx:key="index" label="{{ k }}" name="{{ k}}"
+    value="{{ item }}" placeholder="请输入信息" clearable />
+  <view class="btn">
+    <van-button color="#011627" type="primary" block form-type="submit">保存</van-button>
+  </view>
+</form>

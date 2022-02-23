@@ -1,0 +1,7 @@
+<van-cell-group>
+    <van-cell title="兑换消耗积分" value="+1" label="2021.12.27 14:21" border="{{ false }}" />
+    <van-cell title="兑换消耗积分" value="+1" label="2021.12.27 14:21" border="{{ false }}" />
+    <van-cell title="兑换消耗积分" value="+1" label="2021.12.27 14:21" border="{{ false }}" />
+    <van-cell title="兑换消耗积分" value="+1" label="2021.12.27 14:21" border="{{ false }}" />
+    <van-cell title="兑换消耗积分" value="+1" label="2021.12.27 14:21" border="{{ false }}" />
+</van-cell-group>

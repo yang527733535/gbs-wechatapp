@@ -1,0 +1,74 @@
+<van-tabs active="{{ active }}" bind:change="onChange">
+
+  <van-tab title="当前订单">
+
+    <!-- <van-popup
+      show="{{ ture }}"
+      round
+      custom-style="height: 40%"
+      bind:close="onClose"
+    /> -->
+    <!-- <van-popup
+      show="{{ true }}"
+      position="bottom"
+      custom-style="height: 40%;"
+      bind:close="onClose"
+    /> -->
+    <view wx:for="{{orderList}}" class="hhbox">
+      <view class="ordertext">
+        订单号:{{item.order_code}}
+      </view>
+      <view class="ordertext">
+        剧本名称:{{item.game_code}}
+      </view>
+      <view class="ordertext">
+        pay_status:{{item.pay_status}}
+      </view>
+      <view class="ordernum">
+        支付金额:￥{{item.order_amount}}
+      </view>
+
+      <view class="van-hairline--top mgt"></view>
+      <view class="btngroup">
+        <van-button
+          data-orderDetail='{{item}}'
+          bind:click='gotoPayOrder'
+          size="small"
+          type="primary"
+        >支付
+        </van-button>
+      </view>
+      <!-- order_status -->
+
+    </view>
+
+  </van-tab>
+  <van-tab title="历史订单">内容 1</van-tab>
+</van-tabs>
+
+<van-popup
+  show="{{ showPay }}"
+  position="bottom"
+  custom-style="height:30%;"
+  bind:close="onClose"
+>
+  <view class="paycontent">
+    <view>
+      请选择支付方式
+    </view>
+    <view class='payway'>
+      <view bindtap="wechatPay" class="pay1">
+        <image src="./wechat.png" class="payimg"></image>
+        微信支付
+      </view>
+      <view bindtap="bagPay" class="pay2">
+        <image src="./bag.png" class="payimg"></image>
+        钱包支付
+      </view>
+
+    </view>
+
+  </view>
+
+</van-popup>
+

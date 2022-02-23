@@ -1,0 +1,84 @@
+/* pages/dramadescripe/index.wxss */
+
+page {
+  background-color: #252331;
+}
+.pcContent {
+  width: 100vw;
+  /* background-color: #252331; */
+  /* background-color: thistle; */
+  /* padding: 20px; */
+  color: #fdfdff;
+  /* border: 2px solid #ccc; */
+  display: flex;
+  flex-direction: column;
+}
+
+.dramaCard {
+  background-color: #323042;
+  height: 150px;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+.dramaCard_img {
+  width: 100px;
+  height: 100%;
+  border-radius: 10px;
+}
+.dramaCard_dramainfo {
+  height: 100%;
+  flex: 1;
+  /* background-color: turquoise; */
+  margin-left: 10px;
+}
+
+.Card {
+  background-color: #323042;
+  margin: 5px 20px 5px 20px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+}
+.form {
+  display: flex;
+  color: #bcb9c4;
+  align-items: center;
+}
+
+.dramaCard_dramainfo_title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.dramaCard_dramainfo_desc {
+  color: #ccc;
+  font-size: 14px;
+}
+
+.darmaCover {
+  height: 100%;
+  width: 100%;
+}
+
+.bottombtn {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.price {
+  color: #bcb9c4;
+  font-size: small;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.mytag{
+  /* margin-left: ; */
+  margin-right: 5px;
+}

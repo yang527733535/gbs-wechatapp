@@ -1,0 +1,244 @@
+.search-container {
+  background-color: #F0F0FA;
+}
+
+.search {
+  position: relative;
+  width: 100vw;
+  height: 50rpx;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 26rpx;
+  background-color: #F0F0FA;
+}
+
+.search input {
+  display: block;
+  box-sizing: border-box;
+  background: #f7f8fa;
+  height: 62rpx;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  line-height: 62rpx;
+  font-size: 12px;
+}
+
+.search-title {
+  left: 0;
+  font-weight: bold;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-placeholder {
+  font-size: 14px;
+  color: #a9a6a6;
+  line-height: 62rpx;
+}
+
+.bookContainer {
+  height: 200px;
+  width: 100%;
+  /* background-color: #011627; */
+  margin-top: 10rpx;
+}
+
+page {
+  /* background-color: #011627; */
+}
+
+.myinput {
+  /* width: 200rpx; */
+  margin-top: 60rpx;
+}
+
+.inputWidth {
+  width: 200rpx;
+}
+
+.mysearch {
+  margin-top: 40rpx;
+}
+
+.bookType {
+  /* color: white; */
+  display: flex;
+  font-weight: bolder;
+  font-family: Helvetica, Helvetica, sans-serif;
+  margin-bottom: 10px;
+  overflow-x: auto;
+  padding-left: 5px;
+}
+
+.type_title {
+  color: black !important;
+}
+
+.bookType_item {
+  width: 30px;
+  padding: 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: black;
+  justify-content: center;
+  min-width: 30px;
+}
+
+.check {
+  /* background-image: linear-gradient(
+    to right,
+    #f78ca0 0%,
+    #f9748f 19%,
+    #fd868c 60%,
+    #fe9a8b 100%
+  ); */
+  background-color: #93a8ff;
+  color: white !important;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.bookList {
+  /* height: 1000px; */
+  /* background-color: #011627; */
+}
+
+.allSelect {
+  margin-top: 20rpx;
+}
+
+.myDramaListItem {
+  position: relative;
+  /* width: 100%; */
+  height: 240rpx;
+  background-color: white;
+  margin: 20rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  display: flex;
+  box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1),
+    0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.iconImg {
+  position: absolute;
+  height: 80rpx;
+  width: 80rpx;
+}
+
+.myDramaListItem_left {
+  width: 28%;
+  min-width: 28%;
+  /* background-color: plum; */
+  margin-right: 15rpx;
+}
+
+.myDramaListItem_leftIMG {
+  width: 100%;
+  height: 100%;
+}
+
+.myDramaListItem_rigth {
+  flex: 1;
+  /* background-color: powderblue; */
+}
+
+.myDramaListItem_rigth_title {
+  font-size: 30rpx;
+  font-weight: bolder;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.myDramaListItem_rigth_tag {
+  height: 40rpx;
+  width: 60rpx;
+  /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+  background-color: #efc4ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  font-size: 20rpx;
+  color: white;
+}
+
+.myDramaListItem_rigth_tag_content {
+  display: flex;
+
+  margin-top: 5rpx;
+}
+
+.myDramaListItem_detail {
+  padding: 10rpx;
+}
+
+.myDramaListItem_detail_desc {
+  color: rgb(153, 153, 153);
+  font-size: 22rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.myDramaListItem_detail_userInfo {
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  color: rgb(153, 153, 153);
+  font-size: 22rpx;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  /* background-image: linear-gradient(135deg, red, blue); */
+  background-color: #F92F46;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+}
+
+.logo {
+  left: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.scroll-view_H {
+  height: 100rpx;
+  display: flex;
+}
+
+.scroll-view-item_H {
+  display: inline-block;
+  width: 30px;
+  padding: 5px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  color: #a9a6a6;
+  justify-content: center;
+  min-width: 30px;
+}
+
+
+/* .myinput {
+  background-color: white;
+} */

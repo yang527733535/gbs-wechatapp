@@ -1,3 +1,98 @@
-<view>
+<van-sticky>
+  <view class="search-contianer">
+    <view class="search" style="height:{{navHeight}}px;padding-top:{{navTop}}px">
+      <image class="logo" src="https://oss.mengmohmg.com/logo/mengmo.png"></image>
+      <input bindinput="getName" placeholder-class="search-placeholder"
+        style="width:{{menuButtonObject.left-18-((132/52)*(navHeight-navTop-15))}}px" type="text"
+        placeholder="搜索店铺内剧本"></input>
+    </view>
+  </view>
+</van-sticky>
+<van-transition>
+  <view class="allSelect">
+    <view class="bookType">
+      <view class="bookType_item">
+        <text style="color:black">类型</text>
+      </view>
+      <view bindtap="onclickType" data-typeId="{{null}}" class="bookType_item {{app_gb_type===null?'check':''}}">
+        不限
+      </view>
+      <view bindtap="onclickType" wx:key="label_value" data-typeId="{{item.label_value}}" wx:for="{{gb_typeArr}}"
+        class="bookType_item,  {{app_gb_type===item.label_value?'check':''}} ">
+        <text> {{item.label_zh}}</text>
+      </view>
+    </view>
+    <view class="bookType">
+      <view class="bookType_item">
+        <text style="color:black">人数</text>
+      </view>
+      <view bindtap="onclickPeople" data-typeId="{{null}}" class="bookType_item {{app_gb_people===null?'check':''}}">
+        不限
+      </view>
+      <view bindtap="onclickPeople" wx:key="label_value" data-typeId="{{item.label_value}}" wx:for="{{gb_peopleArr}}"
+        class="bookType_item,  {{app_gb_people===item.label_value?'check':''}} ">
+        <text> {{item.label_zh}}</text>
+      </view>
+    </view>
+    <view class="bookType">
+      <view class="bookType_item">
+        <text style="color:black">标签</text>
+      </view>
+      <view bindtap="onclickTag" data-typeId="{{null}}" class="bookType_item {{gb_text_tag===null?'check':''}}">
+        不限
+      </view>
+      <view bindtap="onclickTag" wx:key="label_value" data-typeId="{{item.label_value}}" wx:for="{{gb_text_tagArr}}"
+        class="bookType_item,  {{gb_text_tag===item.label_value?'check':''}} ">
+        <text> {{item.label_zh}}</text>
+      </view>
+    </view>
 
-  book</view>
+  </view>
+
+  <view class="bookContainer">
+    <van-divider customStyle="color: gray; border-color: gray; font-size: 12px;font-weight: bolder;"
+      contentPosition="center">
+      共计{{dramaNumber}}套剧本
+    </van-divider>
+    <view class="bookList">
+      <scroll-view bindscrolltolower='lower' scroll-y='true' style="height:{{500}}px;margin-top:0px">
+        <view bindtap="gotoDramaDetail" data-gb_code="{{item.gb_code}}" wx:key="gb_id" wx:for="{{dramaList}}"
+          class="myDramaListItem">
+          <image src="../../icons/tuijian.png" class="iconImg"></image>
+          <view class="myDramaListItem_left">
+            <image class="myDramaListItem_leftIMG" src="{{item.gb_cover}}">
+            </image>
+          </view>
+          <view class="myDramaListItem_rigth">
+            <view class="myDramaListItem_rigth_title"> {{item.gb_title}}</view>
+            <view class="myDramaListItem_rigth_tag_content">
+              <view wx:for="{{item.gb_text_tag}}" class="myDramaListItem_rigth_tag">
+                {{gb_tag_map[item]}}
+              </view>
+
+            </view>
+            <view class="myDramaListItem_detail">
+              <view class="myDramaListItem_detail_desc">
+                {{item.gb_text_brief}}
+              </view>
+            </view>
+            <view class="myDramaListItem_detail_userInfo">
+              <view>
+                <van-icon name="friends-o" />
+                {{item.gb_people_note}}·
+                <van-icon name="underway-o" />
+                {{item.gb_hour}}小时
+              </view>
+              <view class="price">¥{{item.gb_price}}</view>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+      <!-- <van-empty description="暂无相关数据哦~" /> -->
+      <!-- <van-loading size="24px" vertical>加载中...</van-loading> -->
+    </view>
+  </view>
+</van-transition>
+
+<van-toast id="van-toast" />

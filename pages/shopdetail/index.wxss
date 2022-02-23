@@ -1,0 +1,20 @@
+.detailContent {
+  margin: 20px;
+}
+.shopname {
+  font-size: 30rpx;
+  font-weight: 700;
+}
+.phone {
+  margin-top: 10px;
+  font-size: 24rpx;
+  color: #ccc;
+}
+.mt {
+  margin-top: 8px;
+}
+.btnGroup {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,18 @@
+{
+  "navigationBarBackgroundColor": "#011627",
+  "backgroundColor": "#011627",
+  "navigationBarTitleText": "小卖部",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index",
+    "van-divider": "@vant/weapp/divider/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "van-cell": "@vant/weapp/cell/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-popup": "@vant/weapp/popup/index",
+    "van-stepper": "@vant/weapp/stepper/index",
+    "van-toast": "@vant/weapp/toast/index"
+  }
+}
