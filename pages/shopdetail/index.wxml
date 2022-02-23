@@ -11,7 +11,11 @@
     地址： {{storage.position_address}}
   </view>
   <view class="btnGroup">
-    <van-button type="primary" size="normal">切换店铺
+    <van-button
+      bind:click="changeShop"
+      type="primary"
+      size="normal"
+    >切换店铺
     </van-button>
     <van-button
       data-phone-number="{{storage.store_phone}}"

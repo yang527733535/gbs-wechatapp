@@ -1,7 +1,11 @@
 // pages/mapApi/include-points/include-points.js
 
-import { qqmapsdk } from "../../utils/location.js";
-import { request } from "../../request/index.js";
+import {
+  qqmapsdk
+} from "../../utils/location.js";
+import {
+  request
+} from "../../request/index.js";
 Page({
   data: {
     shopinputvalue: "",
@@ -15,7 +19,9 @@ Page({
       url: "/xcx/store/option",
       method: "post",
     });
-    const { data } = result.data;
+    const {
+      data
+    } = result.data;
     // 获得店铺列表
     const myobj = data.map((item) => {
       return {
@@ -30,7 +36,9 @@ Page({
       to: myobj, //终点坐标
       success: function (res) {
         // 根据你的排序来排序的
-        const { elements } = res.result;
+        const {
+          elements
+        } = res.result;
         // 排序后结果
         for (let index = 0; index < elements.length; index++) {
           const element = elements[index];
@@ -40,7 +48,10 @@ Page({
           return a.distance - b.distance;
         });
         const finallObj = newOBj.map((item) => {
-          return { ...item, distance: item.distance / 1000 + "" };
+          return {
+            ...item,
+            distance: item.distance / 1000 + ""
+          };
         });
         that.setData({
           shoplist: finallObj,
@@ -65,10 +76,15 @@ Page({
   },
 
   gotoShopDetail(e) {
-    const { shopinfo } = e.currentTarget.dataset;
-    wx.setStorageSync("shopdetail", shopinfo);
+    const {
+      shopinfo
+    } = e.currentTarget.dataset;
+    console.log('shopinfo', shopinfo)
+    var shopinforesult = JSON.stringify(shopinfo);
+    // return
+    // wx.setStorageSync("shopdetail", shopinfo);
     wx.navigateTo({
-      url: "/pages/shopdetail/index",
+      url: `/pages/shopdetail/index?shopdata=${shopinforesult}`,
     });
     //
   },

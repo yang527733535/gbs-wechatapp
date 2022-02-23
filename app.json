@@ -17,7 +17,9 @@
     "pages/chongzhi/index",
     "pages/dmdetai/index",
     "pages/join/index",
-    "pages/pay/index"
+    "pages/pay/index",
+    "pages/roledetail/index",
+    "pages/roomdetail/index"
   ],
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
@@ -49,7 +51,8 @@
     "color": "#999",
     "selectedColor": "#404691",
     "backgroundColor": "#fafafa",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "icons/home-page.png",

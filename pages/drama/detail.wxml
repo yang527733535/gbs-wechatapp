@@ -7,18 +7,18 @@
         style="height:{{navHeight}}px;padding-top:{{navTop}}px;background:rgba(255, 255, 255,{{opacity}}); "
       >
         <van-icon style="opacity:1" name="arrow-left" />
-        <image
+        <!-- <image
           style="margin-left:5px"
           class="logo"
           src="{{dramaDetail.gb_cover}}"
-        ></image>
+        ></image> -->
         <view
           class="myheadtitle"
           placeholder-class="search-placeholder"
           style="width:{{menuButtonObject.left-18-((132/52)*(navHeight-navTop-15))}}px"
           type="text"
         >
-          <view> {{dramaDetail.gb_title}}</view>
+          <view class="shoptitle"> {{selectedShop.store_name}}</view>
         </view>
       </view>
 
@@ -34,20 +34,53 @@
 
           <view class="detailContent_baseInfo_word">
             <view style="color:black" class="dramatitle">{{dramaDetail.gb_title}}</view>
-            <!-- <view class="publish">{{dramaDetail.gb_producer}}</view> -->
-            <view decode="{{true}}" class="detail_msg">
-              <view style="margin-right:10rpx"> {{dramaDetail.gb_people_note}} </view>
-              <view style="margin-right:10rpx">{{dramaDetail.gb_hour}}小时</view>
+            <view class="publish">作者:{{dramaDetail.author.Author}}</view>
+            <view class="publish">发行:{{dramaDetail.gb_producer}}</view>
+            <!-- <view>{{dramaDetail.gb_theme}}</view> -->
+            <view class="myDramaListItem_rigth_tag_content">
+              标签:
+              <view wx:for="{{dramaDetail.gb_text_tag}}" class="myDramaListItem_rigth_tag">
+                {{gb_tag_map[item]}}
+              </view>
             </view>
-            <view>难度: {{levelMap[dramaDetail.gb_level] }}</view>
-            <view>{{dramaDetail.gb_theme}}</view>
-            <view class="price">价格:¥{{dramaDetail.gb_price}}/人</view>
+            <view class="price"> 价格:¥{{dramaDetail.gb_price}}/人</view>
+            <view decode="{{true}}" class="detail_msg">
+              <view style="margin-right:10rpx">
+                <van-icon name="friends-o" />
+                {{dramaDetail.gb_people_note}}
+              </view>
+              <view style="margin-right:10rpx">
+                <van-icon name="underway-o" />
+                {{dramaDetail.gb_hour}}小时
+              </view>
+            </view>
           </view>
         </view>
-
-        <view bindtap="toggleMore" class="drama_bref">
-          <view>剧本简介</view>
-          <view>
+        <view class="mybtnGroup">
+          <van-button
+            icon="phone-o"
+            custom-style="width:170px"
+            color='#EFC4EE'
+            type="info"
+            bindtap="makePhoneCall"
+          >联系客服
+          </van-button>
+          <van-button
+            icon="like-o"
+            custom-style="width:170px"
+            color='#EFC4EE'
+            type="info"
+            data-gb_code="{{item.gb_code}}"
+            bindtap="gotoDramaDesc"
+          >想玩
+          </van-button>
+        </view>
+        <view bindtap="toggleMore" class="headDesc">
+          <view class="headDesc_title">
+            <view class="headDesc_title_line"></view>
+            剧本简介
+          </view>
+          <!-- <view>
             <van-button
               data-gb_code="{{item.gb_code}}"
               bindtap="gotoDramaDesc"
@@ -56,23 +89,25 @@
               size="small"
             >预约组局
             </van-button>
-          </view>
-          <!-- <view wx:if="{{!more}}" class="more">收起
-            <van-icon name="arrow-up" />
-          </view>
-          <view wx:if="{{more}}" class="more"> 展开
-            <van-icon name="arrow-down" />
           </view> -->
         </view>
         <view bindtap="toggleMore" class="gb_text_brief {{more?'textellipsis':''}} ">{{dramaDetail.gb_text_content}}
         </view>
         <view class="role_bref">
-          <view style="margin-bottom:10px">人物介绍</view>
+          <view style="margin-bottom:10px" class="headDesc">
+            <view class="headDesc_title">
+              <view class="headDesc_title_line"></view>
+              人物介绍
+            </view>
+
+          </view>
           <view class="roleContanier">
             <view
               wx:key="role_code"
               wx:for="{{dramaDetail.drama_roles}}"
               class="role_item"
+              data-roleData="{{item}}"
+              bindtap="gotoRoleDetail"
             >
               <view class="role_item_img">
                 <image class="role_item_img_IMG" src="{{item.role_cover}}"></image>
@@ -83,7 +118,14 @@
           </view>
         </view>
 
-        <view class="dramaRec" style="margin-bottom:10px">剧本推荐</view>
+        <!-- <view class="dramaRec" style="margin-bottom:10px">剧本推荐</view> -->
+        <view style="margin-bottom:10px" class="headDesc">
+          <view class="headDesc_title">
+            <view class="headDesc_title_line"></view>
+            剧本推荐
+          </view>
+
+        </view>
         <view class="dramaRec_content">
 
           <view
@@ -102,7 +144,7 @@
           </view>
 
         </view>
-        <view class="changeOther">
+        <view bindtap="getDramaListData" class="changeOther">
           <van-icon name="replay" />
           换一批
         </view>
@@ -111,4 +153,10 @@
 
   </van-transition>
 </view>
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  custom-style="height: 50%;"
+  bind:close="onClose"
+/>
 

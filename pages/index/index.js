@@ -5,7 +5,6 @@ import {
 } from "../../request/index.js";
 const APP = getApp();
 import {
-  getCurrentLocation,
   qqmapsdk
 } from "../../utils/location.js";
 Page({
@@ -25,11 +24,13 @@ Page({
     // 获取当前的s位置
     this.getDmlist();
     // 获取店铺列表
+    // 在这里要判断缓存里有没有店铺
+    // 没有店铺才不执行
     this.getShopList();
-
     // 获取公告
     this.getnotice();
-
+    // 
+    this.getShopAndStore()
     this.setData({
       navHeight: APP.globalData.navHeight,
       navTop: APP.globalData.navTop,
@@ -43,6 +44,17 @@ Page({
     }
   },
 
+  async getShopAndStore() {
+    const result = await request({
+      url: "/system/basic/data",
+      method: "post",
+    });
+    const {
+      data
+    } = result.data;
+    console.log('data', data)
+    
+  },
   async getnotice() {
     const result = await request({
       url: "/xcx/notice/index",
@@ -88,49 +100,60 @@ Page({
   },
 
   async getShopList() {
-    const result = await request({
-      url: "/xcx/store/option",
-      method: "post",
-    });
-    const {
-      data
-    } = result.data;
-    // 获得店铺列表
-    const myobj = data.map((item) => {
-      return {
-        ...item,
-        latitude: item.position_x,
-        longitude: item.position_y,
-      };
-    });
     const that = this;
-    qqmapsdk.calculateDistance({
-      mode: "straight",
-      to: myobj, //终点坐标
-      success: function (res) {
-        // 根据你的排序来排序的
-        const {
-          elements
-        } = res.result;
-        // 排序后结果
-        for (let index = 0; index < elements.length; index++) {
-          const element = elements[index];
-          myobj[index]["distance"] = element.distance;
-        }
-        let newOBj = myobj.sort((a, b) => {
-          return a.distance - b.distance;
-        });
-        const finallObj = newOBj.map((item) => {
-          return {
-            ...item,
-            distance: item.distance / 1000 + "",
-          };
-        });
+    wx.getStorage({
+      key: "storage",
+      success: (result) => {
         that.setData({
-          shoplist: finallObj,
-          selectedShop: finallObj[0],
+          selectedShop: result.data,
         });
       },
+      fail: async () => {
+        const result = await request({
+          url: "/xcx/store/option",
+          method: "post",
+        });
+        const {
+          data
+        } = result.data;
+        // 获得店铺列表
+        const myobj = data.map((item) => {
+          return {
+            ...item,
+            latitude: item.position_x,
+            longitude: item.position_y,
+          };
+        });
+        qqmapsdk.calculateDistance({
+          mode: "straight",
+          to: myobj, //终点坐标
+          success: function (res) {
+            // 根据你的排序来排序的
+            const {
+              elements
+            } = res.result;
+            // 排序后结果
+            for (let index = 0; index < elements.length; index++) {
+              const element = elements[index];
+              myobj[index]["distance"] = element.distance;
+            }
+            let newOBj = myobj.sort((a, b) => {
+              return a.distance - b.distance;
+            });
+            const finallObj = newOBj.map((item) => {
+              return {
+                ...item,
+                distance: item.distance / 1000 + "",
+              };
+            });
+            that.setData({
+              shoplist: finallObj,
+              selectedShop: finallObj[0],
+            });
+          },
+        });
+      },
+      complete: () => {},
     });
   },
 

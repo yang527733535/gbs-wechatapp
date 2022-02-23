@@ -1,71 +1,91 @@
-// pages/dmdetai/index.js
-import { request } from "../../request/index.js";
+import {
+  request
+} from "../../request/index.js";
+
 Page({
+
   /**
    * 页面的初始数据
    */
   data: {
-    dmdetail: null,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getDmDetail(options);
+    this.joinRoom(JSON.parse(options.roomdata))
   },
-  async getDmDetail(param) {
-    console.log("param: ", param);
+
+  async joinRoom(param) {
     const result = await request({
-      url: "/xcx/dm/detail",
+      url: "/xcx/game/join-room",
       method: "post",
       data: param,
     });
-    const { data } = result.data;
-    let dmdatail = data["0"];
-    console.log("dmdatail: ", dmdatail);
+    console.log(result.data)
+    const {
+      code,
+      message,
+      data
+    } = result.data;
     this.setData({
-      dmdetail: dmdatail,
-    });
+      roomDetailData: data
+    })
+    if (code != 200) {
+      wx.showToast({
+        title: message,
+        icon: "none",
+      });
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {},
+  onReady: function () {
+
+  },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {},
+  onShow: function () {
+
+  },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {},
+  onHide: function () {
+
+  },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {},
+  onUnload: function () {
+
+  },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {},
+  onPullDownRefresh: function () {
+
+  },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {},
+  onReachBottom: function () {
+
+  },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {},
-  // exitPage:Functio
-  exitPage: function () {
-    wx.navigateBack({
-      delta: 1,
-    });
-  },
-});
+  onShareAppMessage: function () {
+
+  }
+})

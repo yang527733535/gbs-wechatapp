@@ -1,0 +1,23 @@
+<view class="img">
+  <view bindtap="exitPage" class="exit">
+    <van-icon name="arrow-left" />
+  </view>
+  <image
+    class="DMimg"
+    src="{{roledata.role_cover}}"
+    mode="widthFix"
+    lazy-load="false"
+    binderror=""
+    bindload=""
+  />
+</view>
+<view class="roledata hhbox">
+  <view class="firstLine">
+    <view class="dmname">{{roledata.user_nick}}</view>
+    <view>{{roledata.user_gender}}</view>
+  </view>
+
+  <view class="dmname mg5">角色介绍</view>
+  {{roledata.role_brief}}
+</view>
+

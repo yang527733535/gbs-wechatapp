@@ -9,7 +9,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getShopDetail();
+    this.setData({
+      storage: JSON.parse(options.shopdata),
+    });
   },
   makePhoneCall(e) {
     wx.makePhoneCall({
@@ -29,18 +31,19 @@ Page({
     });
   },
 
-  getShopDetail() {
-    const that = this;
-    wx.getStorage({
-      key: "shopdetail",
-      success: function (res) {
-        // success
-        that.setData({
-          storage: res.data,
-        });
-      },
-    });
-  },
+  // getShopDetail() {
+  //   const that = this;
+  //   wx.getStorage({
+  //     key: "shopdetail",
+  //     success: function (res) {
+  //       console.log("res: ", res);
+  //       // success
+  //       that.setData({
+  //         storage: res.data,
+  //       });
+  //     },
+  //   });
+  // },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -75,4 +78,11 @@ Page({
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {},
+  changeShop: function () {
+    // 这里的逻辑 切回首页，然后
+    wx.setStorageSync("storage", this.data.storage);
+    wx.reLaunch({
+      url: "/pages/index/index",
+    });
+  },
 });

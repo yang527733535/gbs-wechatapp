@@ -87,7 +87,7 @@
         <view class="headDesc_title_line"></view>
         剧本目录
       </view>
-      <view class="headDesc_more">
+      <view bindtap="gotoBook" class="headDesc_more">
         更多
         <view class="dot">
           <view class="dot_1"></view>

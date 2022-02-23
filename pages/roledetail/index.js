@@ -12,22 +12,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // this.getDmDetail(options);
-  },
-  async getDmDetail(param) {
-    console.log("param: ", param);
-    const result = await request({
-      url: "/xcx/dm/detail",
-      method: "post",
-      data: param,
-    });
-    const { data } = result.data;
-    let dmdatail = data["0"];
-    console.log("dmdatail: ", dmdatail);
     this.setData({
-      dmdetail: dmdatail,
+      roledata: JSON.parse(options.roledata),
     });
   },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

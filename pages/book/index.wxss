@@ -178,7 +178,6 @@ page {
 
 .myDramaListItem_rigth_tag_content {
   display: flex;
-
   margin-top: 5rpx;
 }
 

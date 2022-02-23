@@ -1,0 +1,12 @@
+<!--pages/roomdetail/index.wxml-->
+<view>pages/roomdetail/index.wxml</view>
+<view>{{roomDetailData.game_code}}</view>
+<view>{{roomDetailData.store_code}}</view>
+<view>{{roomDetailData.room_code}}</view>
+<view>{{roomDetailData.gb_code}}</view>
+<view>{{roomDetailData.gb_title}}</view>
+<view>{{roomDetailData.gb_cover}}</view>
+<view>{{roomDetailData.gb_view_tag}}</view>
+<view>{{roomDetailData.gb_type}}</view>
+<view>{{roomDetailData.gb_level}}</view>
+
