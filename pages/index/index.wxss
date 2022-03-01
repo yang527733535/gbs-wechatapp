@@ -216,7 +216,7 @@
   /* padding-left: 26rpx; */
   align-items: center;
   justify-content: flex-start;
-  background-color: #f0f0fa;
+  background-color: white;
   margin: 0px 10px;
 }
 
@@ -360,23 +360,28 @@
   border-radius: 8px;
   margin-top: 10px;
   padding: 10px;
-  height: 100px;
+  /* height: 100px; */
   overflow: auto;
+  border-radius: 15px;
+  /* filter: drop-shadow(0px 4px 4.5px rgba(0, 0, 0, 0.16)); */
+  filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.16));
+  background-color: #f8f6f7;
 }
 
 .gonggaotext {
   color: #929cea;
-  font-size: 30rpx;
+  font-size: 28rpx;
   /* font-weight: 700; */
   font-family: Helvetica;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
+  text-align: center;
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis;
+  display: -webkit-box; */
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
+  /* -webkit-line-clamp: 5; */
   overflow: hidden;
 }
 
@@ -395,22 +400,26 @@
   width: 100%;
   overflow: auto;
   margin-top: 10px;
+  justify-content: space-around;
 }
 
 .muluscrollBox {
   display: flex;
-  width: 1000px;
-  height: 280px;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .muluitem {
-  width: 40vw;
-  height: 100px;
+  width: 43vw;
+  height: 90px;
   flex-shrink: 0;
-  margin-right: 3px;
+  /* margin-right: 6px; */
   margin-bottom: 5px;
   display: flex;
+  border-radius: 15px;
+  filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.16));
+  background-color: #f8f6f7;
+  padding: 2px;
 }
 
 .otherinfo {
@@ -427,13 +436,13 @@
 .DMcontent {
   margin-top: 10px;
   margin-bottom: 20px;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   overflow: auto;
   margin-bottom: 10px;
-  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  /* box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1); */
   opacity: 1;
-  border-radius: 8px;
+  border-radius: 16px;
   margin-top: 10px;
   padding: 10px;
 }
@@ -449,11 +458,11 @@
 
 .Dramacontent {
   margin-top: 10px;
-  background-color: white;
+  /* background-color: white; */
   display: flex;
   overflow: auto;
   margin-bottom: 10px;
-  box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1);
+  /* box-shadow: 0px 1px 7px rgba(50, 19, 80, 0.1); */
   opacity: 1;
   border-radius: 8px;
   margin-top: 10px;
@@ -478,14 +487,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 14px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #93a8ff;
+  font-weight: bold;
+  font-family: "Microsoft Ya Hei";
 }
 
 .mydmimg {
   height: 100%;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .iconfont {
@@ -499,9 +510,10 @@
 
 .left_img {
   height: 100%;
-  width: 70px;
+  width: 50px;
   background-color: #93a8ff;
   border-radius: 5px;
+  margin-right: 5px;
 }
 
 .rigth_content {
@@ -516,7 +528,8 @@
 
 .num {
   color: red;
-  font-size: 26rpx;
+  font-size: 22rpx;
+  /* text-align: right; */
 }
 
 .myleft_img {
@@ -525,15 +538,15 @@
   /* overflow: hidden; */
   border-radius: 5px;
 }
+
 .contentword {
-  font-size: 26rpx;
+  font-size: 24rpx;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   width: 100%;
-
 }
 
 .num2 {
-  font-size: 12rpx;
+  font-size: 19rpx;
   color: "#ccc";
 }

@@ -1,6 +1,11 @@
-import { request } from "../../request/index.js";
-import { getdictByCode } from "../../utils/getdictBtName";
-import { login } from "../../utils/asyncWx.js";
+import {
+  request
+} from "../../request/index.js";
+
+
+// const baseUrl = 'https://dev-service.mengmohmg.com';
+const baseUrl = 'https://service.mengmohmg.com';
+
 
 Page({
   /**
@@ -52,7 +57,9 @@ Page({
     const result = await request({
       url: "/xcx/member/get-info",
     });
-    const { data } = result.data;
+    const {
+      data
+    } = result.data;
     console.log("data", data);
 
     if (data.code === 4002) {
@@ -123,7 +130,9 @@ Page({
     wx.getUserProfile({
       desc: "展示用户信息", // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-        const { userInfo } = res;
+        const {
+          userInfo
+        } = res;
         wx.login({
           success(res) {
             if (res.errMsg === "login:ok") {
@@ -138,11 +147,14 @@ Page({
                 province: userInfo.province,
               };
               wx.request({
-                url: "https://gbs.toptian.com/xcx/member/session",
+                url: `${baseUrl}/xcx/member/session`,
                 data: myparma,
                 method: "POST",
                 success: (result) => {
-                  const { member_token } = result.data.data;
+                  const {
+                    member_token
+                  } = result.data.data;
+                  console.log('member_token', member_token)
                   wx.setStorageSync("token", member_token);
                   const userInfo = {
                     ...result.data.data,
@@ -202,7 +214,9 @@ Page({
         currency: "CNY",
       },
     });
-    const { paySign } = result.data.data;
+    const {
+      paySign
+    } = result.data.data;
     let obj = JSON.parse(paySign);
     wx.requestPayment({
       timeStamp: obj.timeStamp,

@@ -1,6 +1,6 @@
 page {
   /* background-image: linear-gradient(to top, #6a85b6 0%, #bac8e0 100%); */
-  background-color: #f0f0fa;
+  /* background-color: #f0f0fa; */
   color: black;
 }
 
@@ -62,8 +62,8 @@ page {
 }
 
 .price {
-  font-size: 34rpx;
-  font-weight: 600;
+  /* font-size: 34rpx; */
+  /* font-weight: 600; */
   /* margin-top: 80rpx; */
   color:red
 }

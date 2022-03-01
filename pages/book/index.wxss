@@ -1,5 +1,5 @@
 .search-container {
-  background-color: #F0F0FA;
+  /* background-color: #F0F0FA; */
 }
 
 .search {
@@ -9,7 +9,7 @@
   display: flex;
   box-sizing: border-box;
   padding-left: 26rpx;
-  background-color: #F0F0FA;
+  /* background-color: #F0F0FA; */
 }
 
 .search input {
@@ -68,7 +68,7 @@ page {
 .bookType {
   /* color: white; */
   display: flex;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-family: Helvetica, Helvetica, sans-serif;
   margin-bottom: 10px;
   overflow-x: auto;
@@ -123,14 +123,13 @@ page {
   position: relative;
   /* width: 100%; */
   height: 240rpx;
-  background-color: white;
-  margin: 20rpx;
+  margin: 20px;
   padding: 20rpx;
   border-radius: 20rpx;
   display: flex;
-  box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 12px 5px -10px rgba(0, 0, 0, 0.1),
-    0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  filter: drop-shadow(0px 12px 14.5px rgba(0, 0, 0, 0.16));
+  background-color: #f8f6f7;
 }
 
 .iconImg {
@@ -140,15 +139,17 @@ page {
 }
 
 .myDramaListItem_left {
-  width: 28%;
-  min-width: 28%;
+  width: 23%;
+  min-width: 23%;
   /* background-color: plum; */
-  margin-right: 15rpx;
+  margin-right: 20rpx;
+  border-radius: 10px;
 }
 
 .myDramaListItem_leftIMG {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 .myDramaListItem_rigth {
@@ -158,12 +159,12 @@ page {
 
 .myDramaListItem_rigth_title {
   font-size: 30rpx;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .myDramaListItem_rigth_tag {
-  height: 40rpx;
+  height: 30rpx;
   width: 60rpx;
   /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
   background-color: #efc4ee;

@@ -1,7 +1,30 @@
-<view class="mycell" >
-  <van-cell-group inset>
-    <van-cell title="选择店铺" value="内容" />
-    <van-cell title="选择房间" value="内容" />
-  </van-cell-group>
-  <button class="mybtn" type="primary">加入游戏</button>
+<view class="mycell">
+  <view class="Card">
+    <view bindtap="showShorePopup" class="form">
+      <view>
+        选择店铺
+      </view>
+      <view  style="margin-left:20px">
+        {{selectShop.name}}
+      </view>
+    </view>
+  </view>
+  <view class="Card">
+    <view class="form">
+      <view bindtap="showRoomPopup">
+        选择房间
+      </view>
+      <view bindtap="showRoomPopup" style="margin-left:20px">
+        {{selectRoom.name}}
+      </view>
+    </view>
+  </view>
+  <button 
+  bindtap="entergame"
+  class="mybtn" type="primary">加入游戏</button>
 </view>
+
+<van-action-sheet show="{{ showstore }}" actions="{{ storeactions }}" bind:close="onCloseStore"
+  bind:select="onSelectStore" />
+
+<van-action-sheet show="{{ showroom }}" actions="{{ roomlist }}" bind:close="onCloseRoom" bind:select="onSelectRoom" />

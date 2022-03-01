@@ -4,7 +4,7 @@
       <image class="logo" src="https://oss.mengmohmg.com/logo/mengmo.png"></image>
       <input bindinput="getName" placeholder-class="search-placeholder"
         style="width:{{menuButtonObject.left-18-((132/52)*(navHeight-navTop-15))}}px" type="text"
-        placeholder="搜索店铺内剧本"></input>
+        placeholder="请输入剧本相关信息"></input>
     </view>
   </view>
 </van-sticky>
@@ -69,7 +69,6 @@
               <view wx:for="{{item.gb_text_tag}}" class="myDramaListItem_rigth_tag">
                 {{gb_tag_map[item]}}
               </view>
-
             </view>
             <view class="myDramaListItem_detail">
               <view class="myDramaListItem_detail_desc">

@@ -93,7 +93,7 @@
         {
           "name": "加入游戏",
           "pathName": "pages/join/index",
-          "query": "store_code=ZS220100013&room_code=ZS220100013R010",
+          "query": "",
           "scene": null
         }
       ]

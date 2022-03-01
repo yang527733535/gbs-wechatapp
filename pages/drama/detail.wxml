@@ -43,7 +43,9 @@
                 {{gb_tag_map[item]}}
               </view>
             </view>
-            <view class="price"> 价格:¥{{dramaDetail.gb_price}}/人</view>
+            <view class="price">
+            <text>价格:</text><text>
+            </text> ¥{{dramaDetail.gb_price}}/人</view>
             <view decode="{{true}}" class="detail_msg">
               <view style="margin-right:10rpx">
                 <van-icon name="friends-o" />

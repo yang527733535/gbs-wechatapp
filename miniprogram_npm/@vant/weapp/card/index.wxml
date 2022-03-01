@@ -14,6 +14,7 @@
       <van-tag
         wx:if="{{ tag }}"
         mark
+        size='medium'
         type="danger"
         custom-class="van-card__tag"
       >

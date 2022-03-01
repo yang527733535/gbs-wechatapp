@@ -1,1 +1,196 @@
 /* pages/roomdetail/index.wxss */
+
+.img {
+  height: 240px;
+  /* background-color: oldlace; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.exit {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  z-index: 2;
+  /* background: chartreuse; */
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.DMimg {
+  height: 100%;
+}
+
+.dmdetail {
+  /* height: 80vh; */
+  background-color: white;
+  /* margin: 10px; */
+  padding: 10px;
+}
+
+.firstLine {
+  /* display: grid; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 15px;
+  filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.16));
+  background-color: #f8f6f7;
+  padding: 10px;
+}
+
+.dmname {
+  font-weight: 700;
+  font-size: 36rpx;
+  font-family: Helvetica;
+}
+
+.other {
+  color: #ccc;
+  margin-top: 6px;
+  font-family: Helvetica;
+}
+
+.mg5 {
+  margin-top: 5px;
+}
+
+.useritem {
+  /* height: 100px; */
+  /* background-color: oldlace; */
+  display: flex;
+  align-items: center;
+}
+
+.ava {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.mgt {
+  margin-top: 4px;
+}
+
+.btngroup {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.ordertext {
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.ordernum {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: red;
+}
+
+.paycontent {
+  padding: 20px;
+}
+
+.payway {
+  display: flex;
+  height: 120px;
+}
+
+.pay1 {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pay2 {
+  height: 120px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ccc;
+}
+
+.payimg {
+  height: 50px;
+  width: 50px;
+}
+
+.dramainfo {
+  height: 200px;
+  margin: 10px;
+  display: flex;
+}
+
+.leftimg {
+  height: 100%;
+  width: 140px;
+  /* background-color: palevioletred; */
+  /* padding: 10px; */
+}
+
+.leftimg_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.rigth_info {
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.myDramaListItem_rigth_tag {
+  height: 40rpx;
+  width: 60rpx;
+  /* background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%); */
+  background-color: #efc4ee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+  font-size: 20rpx;
+  color: white;
+}
+
+.myDramaListItem_rigth_tag_content {
+  display: flex;
+  margin-top: 5rpx;
+}
+
+/* border-radius: 15px;
+    filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.16));
+    background-color: #f8f6f7; */
+
+.dminfo {
+  margin-top: 10px;
+  height: 100px;
+  border-radius: 15px;
+  filter: drop-shadow(0px 2px 2.5px rgba(0, 0, 0, 0.16));
+  background-color: #f8f6f7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

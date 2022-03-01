@@ -69,8 +69,8 @@
       </view>
 
     </view>
-    <view class="gonggao">
-      <view wx:for="{{noticeList}}">
+    <view wx:if="{{noticeList.length!==0}}" class="gonggao">
+      <view wx:if="{{noticeList.length!==0}}" wx:for="{{noticeList}}">
         <view class="gonggaotext">
           {{item.notice_title}}
         </view>
@@ -103,7 +103,7 @@
             bindtap="gotoDramaDetail"
             data-gb_code="{{item.gb_code}}"
             wx:for="{{hotDramaList}}"
-            class="muluitem hhbox2"
+            class="muluitem"
           >
             <view class="left_img">
               <image
@@ -119,7 +119,12 @@
             <view class="rigth_content">
               <view class="contentword">{{item.gb_title}} </view>
               <view>
-                <van-tag color='#efc4ee' type="primary">{{item.gb_theme}}</van-tag>
+                <van-tag
+                  color='#efc4ee'
+                  size='mini'
+                  type="primary"
+                >{{item.gb_theme}}
+                </van-tag>
               </view>
               <view class="num2">
                 <van-icon name="friends-o" />

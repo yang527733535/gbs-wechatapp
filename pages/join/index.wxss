@@ -6,3 +6,19 @@
 .mycell {
   margin-top: 10px;
 }
+
+
+.Card {
+  background-color: white;
+  margin: 5px 20px 5px 20px;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  margin-top: 14px;
+}
+
+.form {
+  display: flex;
+  color: #bcb9c4;
+  align-items: center;
+}

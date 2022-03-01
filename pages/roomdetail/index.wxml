@@ -1,12 +1,98 @@
 <!--pages/roomdetail/index.wxml-->
-<view>pages/roomdetail/index.wxml</view>
-<view>{{roomDetailData.game_code}}</view>
-<view>{{roomDetailData.store_code}}</view>
-<view>{{roomDetailData.room_code}}</view>
-<view>{{roomDetailData.gb_code}}</view>
-<view>{{roomDetailData.gb_title}}</view>
-<view>{{roomDetailData.gb_cover}}</view>
-<view>{{roomDetailData.gb_view_tag}}</view>
-<view>{{roomDetailData.gb_type}}</view>
-<view>{{roomDetailData.gb_level}}</view>
+
+<view class="dramainfo">
+  <view class="leftimg">
+    <image
+      class="leftimg_img"
+      src="{{dramaDetail.gb_cover}}"
+      mode="aspectFit|aspectFill|widthFix"
+      lazy-load="false"
+      binderror=""
+      bindload=""
+    />
+
+  </view>
+  <view class="rigth_info">
+    <view class="title"> {{dramaDetail.gb_title}}</view>
+    <view>
+      <van-icon name="diamond" />
+      {{dramaDetail.gb_producer}}
+    </view>
+    <view>
+
+      {{dramaDetail.gb_theme}}
+    </view>
+    <view class="myDramaListItem_rigth_tag_content">
+      <view wx:for="{{dramaDetail.gb_text_tag}}" class="myDramaListItem_rigth_tag">
+        {{gb_tag_map[item]}}
+      </view>
+    </view>
+
+    <view>
+      <van-icon name="friends-o" />
+      {{dramaDetail.gb_people_note}}
+      <van-icon name="clock-o" />
+      {{dramaDetail.gb_hour}}小时
+    </view>
+  </view>
+
+</view>
+
+<view class="dmdetail">
+  <view>玩家列表</view>
+  <view class="firstLine">
+    <view></view>
+    <view class="playercotent">
+      <view wx:for="{{roomDetailData.players}}" class="useritem">
+        <image src='{{item.member_face}}' class="ava"></image>
+        <view>{{item.member_name}}</view>
+        <!-- <view> ¥{{item.order_amount}}</view> -->
+        <!-- <view>状态:{{item.is_pay==0?'未支付':''}}</view> -->
+        <view>
+          <van-button
+            wx:if="{{item.is_pay==0}}"
+            data-myorder="{{item}}"
+            bind:click="wechatPay"
+            data-now=""
+            style="margin-left:10px"
+            size="small"
+            type="primary"
+          >微信
+          </van-button>
+          <van-button
+            wx:if="{{item.is_pay==0}}"
+            data-myorder="{{item}}"
+            bind:click="bagPay"
+            data-now=""
+            style="margin-left:10px"
+            size="small"
+            type="primary"
+          >钱包
+          </van-button>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  <view class="mg5">dm信息</view>
+  <view class="dminfo">暂未分配主持人</view>
+</view>
+<!-- 
+<van-popup show="{{ false }}" position="bottom" custom-style="height:30%;" bind:close="onClose">
+  <view class="paycontent">
+    <view>
+      请选择支付方式
+    </view>
+    <view class='payway'>
+      <view bindtap="wechatPay" class="pay1">
+        <image src="./wechat.png" class="payimg"></image>
+        微信支付
+      </view>
+      <view bindtap="bagPay" class="pay2">
+        <image src="./bag.png" class="payimg"></image>
+        钱包支付
+      </view>
+    </view>
+  </view>
+</van-popup> -->
 
